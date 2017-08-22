@@ -1,0 +1,15 @@
+﻿{
+  "modules": [
+    {
+      "type": "AuroraLineAPI.Modules.ServiceModule, AuroraLineAPI"
+    },
+    {
+      "type": "AuroraLineAPI.Modules.RepositoryModule, AuroraLineAPI"
+    },
+    {
+      "type": "AuroraLineAPI.Modules.MapperModule, AuroraLineAPI"
+    }
+  ]
+}
+
+
