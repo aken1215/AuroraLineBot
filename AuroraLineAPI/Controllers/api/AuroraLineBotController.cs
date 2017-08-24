@@ -2,9 +2,12 @@
 using AuroraLineAPI.Services.AuroraLineBot;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
 
@@ -31,6 +34,18 @@ namespace AuroraLineAPI.Controllers.api
             var result = await this.AuroraLineBotService.GetLineUserInfo(id);
 
             return Request.CreateResponse(HttpStatusCode.OK, result);
+        }
+
+        [Route("api/UserInfoState/{id}")]
+        public async Task<HttpResponseMessage> GetUserInfoState(string id)
+        {
+            var response = new HttpResponseMessage();
+            response.StatusCode = HttpStatusCode.OK;
+            response.Content = new StringContent("<html><body>已領取</body></html>");
+            response.Content.Headers.ContentType = new MediaTypeHeaderValue("text/html");
+            response.Content.Headers.ContentType.CharSet = "utf-8";
+         
+            return response;
         }
 
         // POST: api/AuroraLineBot
