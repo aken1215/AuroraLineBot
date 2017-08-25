@@ -11,7 +11,11 @@ namespace AuroraLineAPI.Repositories.AuroraLineBot
     public interface IAuroraLineBotRepository
     {
         Task CreateLineUserInfo(UserInfo model);
+
         Task UpdateLineUserInfo(UserInfo model);
+
         Task<UserInfo> GetLineUserInfo(string id);
+
+        Task<bool> GetUserInfoGiftState(string id);
     }
 }

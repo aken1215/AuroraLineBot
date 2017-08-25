@@ -43,5 +43,10 @@ namespace AuroraLineAPI.Services.AuroraLineBot
             var model = this.Mapper.Map<UserInfo>(auroraLineViewModel);
             await this.AuroraLineBotRepository.UpdateLineUserInfo(model);
         }
+
+        public async Task<bool> GetUserInfoGiftState(string id)
+        {
+            return await this.AuroraLineBotRepository.GetUserInfoGiftState(id);
+        }
     }
 }

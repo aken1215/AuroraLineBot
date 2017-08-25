@@ -36,15 +36,28 @@ namespace AuroraLineAPI.Controllers.api
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
 
-        [Route("api/UserInfoState/{id}")]
-        public async Task<HttpResponseMessage> GetUserInfoState(string id)
+        [Route("api/UserInfoGiftState/{id}")]
+        [HttpGet]
+        public async Task<HttpResponseMessage> UpdateUserInfoGiftState(string id)
         {
+            var gotGift = await this.AuroraLineBotService.GetUserInfoGiftState(id);
             var response = new HttpResponseMessage();
+            var message = "";
+
+            if (gotGift)
+            {
+                message = "<html><body>已領過小禮物</body></html>";
+            }
+            else
+            {
+                message = "<html><body>發送小禮物</body></html>";
+            }
+
+            response.Content = new StringContent(message);
             response.StatusCode = HttpStatusCode.OK;
-            response.Content = new StringContent("<html><body>已領取</body></html>");
             response.Content.Headers.ContentType = new MediaTypeHeaderValue("text/html");
             response.Content.Headers.ContentType.CharSet = "utf-8";
-         
+
             return response;
         }
 
@@ -61,7 +74,7 @@ namespace AuroraLineAPI.Controllers.api
         {
             await this.AuroraLineBotService.UpdateLineUserInfo(model);
 
-            return Request.CreateResponse(HttpStatusCode.OK,"Done");
+            return Request.CreateResponse(HttpStatusCode.OK, "Done");
         }
 
         // DELETE: api/AuroraLineBot/5

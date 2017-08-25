@@ -10,7 +10,11 @@ namespace AuroraLineAPI.Services.AuroraLineBot
     public interface IAuroraLineBotService
     {
         Task CreateLineUserInfo(AuroraLineViewModel model);
+
         Task UpdateLineUserInfo(AuroraLineViewModel model);
+
         Task<AuroraLineViewModel> GetLineUserInfo(string id);
+
+        Task<bool> GetUserInfoGiftState(string id);
     }
 }

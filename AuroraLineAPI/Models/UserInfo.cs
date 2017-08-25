@@ -16,5 +16,7 @@ namespace AuroraLineAPI.Models
         public string EMail { get; set; }
 
         public string JobTitle { get; set; }
+
+        public bool GotGift { get; set; }
     }
 }

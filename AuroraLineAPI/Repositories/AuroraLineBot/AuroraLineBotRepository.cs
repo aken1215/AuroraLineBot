@@ -36,5 +36,26 @@ namespace AuroraLineAPI.Repositories.AuroraLineBot
 
             await this.AuroraLineDbContext.SaveChangesAsync();
         }
+
+        public async Task<bool> GetUserInfoGiftState(string id)
+        {
+            var userInfo = await this.AuroraLineDbContext.UserInfos.Where(i => i.LineID == id).FirstOrDefaultAsync();
+
+            if(userInfo != null)
+            {
+                var gotGift = userInfo.GotGift;
+                if (!gotGift)
+                {
+                    userInfo.GotGift = true;
+                    await this.AuroraLineDbContext.SaveChangesAsync();
+                }
+
+                return gotGift;
+            }
+            else
+            {
+                return true;
+            }
+        }
     }
 }

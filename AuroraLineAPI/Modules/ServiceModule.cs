@@ -1,4 +1,5 @@
 ﻿using AuroraLineAPI.Services.AuroraLineBot;
+using AuroraLineAPI.Services.Common;
 using Autofac;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,7 @@ namespace AuroraLineAPI.Modules
         {
             base.Load(builder);
             builder.RegisterType<AuroraLineBotService>().As<IAuroraLineBotService>().InstancePerRequest();
+            builder.RegisterType<QRCodeService>().As<IQRCodeService>().InstancePerRequest();
         }
     }
 }
