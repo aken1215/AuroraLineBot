@@ -31,7 +31,8 @@ namespace AuroraLineAPI.Controllers.api
         // GET: api/AuroraLineBot/5
         public async Task<HttpResponseMessage> Get(string id)
         {
-            var result = await this.AuroraLineBotService.GetLineUserInfo(id);
+            var userInfo = await this.AuroraLineBotService.GetLineUserInfo(id);
+            var result = userInfo == null ? false : true;
 
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
