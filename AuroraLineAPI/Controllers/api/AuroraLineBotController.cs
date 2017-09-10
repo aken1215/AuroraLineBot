@@ -41,7 +41,7 @@ namespace AuroraLineAPI.Controllers.api
 
 
         // POST: api/AuroraLineBot
-        public async Task<HttpResponseMessage> Post([FromBody]AuroraLineViewModel model)
+        public async Task<HttpResponseMessage> Post(AuroraLineViewModel model)
         {
             try
             {
@@ -57,7 +57,7 @@ namespace AuroraLineAPI.Controllers.api
         }
 
         // PUT: api/AuroraLineBot/5
-        public async Task<HttpResponseMessage> Put([FromBody]AuroraLineViewModel model)
+        public async Task<HttpResponseMessage> Put(AuroraLineViewModel model)
         {
             if (ModelState.IsValid)
             {
