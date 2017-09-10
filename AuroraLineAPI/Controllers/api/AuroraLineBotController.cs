@@ -1,5 +1,6 @@
 ﻿using AuroraLineAPI.AuroraLine.ViewModels;
 using AuroraLineAPI.Services.AuroraLineBot;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -42,9 +43,17 @@ namespace AuroraLineAPI.Controllers.api
         // POST: api/AuroraLineBot
         public async Task<HttpResponseMessage> Post([FromBody]AuroraLineViewModel model)
         {
-            await this.AuroraLineBotService.CreateLineUserInfo(model);
+            try
+            {
+                await this.AuroraLineBotService.CreateLineUserInfo(model);
 
-            return Request.CreateResponse(HttpStatusCode.NoContent);
+                return Request.CreateResponse(HttpStatusCode.NoContent);
+            }
+            catch
+            {
+                var request = JsonConvert.SerializeObject(model);
+                return Request.CreateResponse(HttpStatusCode.OK, request);
+            }
         }
 
         // PUT: api/AuroraLineBot/5
