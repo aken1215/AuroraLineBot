@@ -25,7 +25,7 @@ namespace AuroraLineAPI.Controllers.api
         public HttpResponseMessage Get(string id)
         {
             var baseUrl = Request.RequestUri.GetLeftPart(UriPartial.Authority);
-            var url = string.Format("{0}/api/UserInfoGiftState/{1}", baseUrl, id);
+            var url = string.Format("{0}/api/ScanQrCode/{1}", baseUrl, id);
             var m_Bitmap = this.QRCodeService.GenerateQRCode(url);
 
             MemoryStream ms = new MemoryStream();
