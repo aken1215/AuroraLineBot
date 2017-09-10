@@ -282,33 +282,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Mapper\AuroraLineBot\AuroraLineViewModelMappingProfile.cs" />
-    <Compile Include="Migrations\201708220238167_CreateAuroraLine.cs" />
-    <Compile Include="Migrations\201708220238167_CreateAuroraLine.Designer.cs">
-      <DependentUpon>201708220238167_CreateAuroraLine.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708250140089_AddColumnToUserInfo.cs" />
-    <Compile Include="Migrations\201708250140089_AddColumnToUserInfo.Designer.cs">
-      <DependentUpon>201708250140089_AddColumnToUserInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708260623486_AddEngageds.cs" />
-    <Compile Include="Migrations\201708260623486_AddEngageds.Designer.cs">
-      <DependentUpon>201708260623486_AddEngageds.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708260630519_ReNameEngaged.cs" />
-    <Compile Include="Migrations\201708260630519_ReNameEngaged.Designer.cs">
-      <DependentUpon>201708260630519_ReNameEngaged.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708260645127_AddPendingRequestAndAgent.cs" />
-    <Compile Include="Migrations\201708260645127_AddPendingRequestAndAgent.Designer.cs">
-      <DependentUpon>201708260645127_AddPendingRequestAndAgent.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201709080821562_UpdateUserInfo.cs" />
-    <Compile Include="Migrations\201709080821562_UpdateUserInfo.Designer.cs">
-      <DependentUpon>201709080821562_UpdateUserInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201709080915437_RemoveUserInfoGotGift.cs" />
-    <Compile Include="Migrations\201709080915437_RemoveUserInfoGotGift.Designer.cs">
-      <DependentUpon>201709080915437_RemoveUserInfoGotGift.cs</DependentUpon>
+    <Compile Include="Migrations\201709100635219_CreateUserInfo.cs" />
+    <Compile Include="Migrations\201709100635219_CreateUserInfo.Designer.cs">
+      <DependentUpon>201709100635219_CreateUserInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Agent.cs" />
@@ -352,30 +328,12 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201708220238167_CreateAuroraLine.resx">
-      <DependentUpon>201708220238167_CreateAuroraLine.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708250140089_AddColumnToUserInfo.resx">
-      <DependentUpon>201708250140089_AddColumnToUserInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708260623486_AddEngageds.resx">
-      <DependentUpon>201708260623486_AddEngageds.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708260630519_ReNameEngaged.resx">
-      <DependentUpon>201708260630519_ReNameEngaged.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708260645127_AddPendingRequestAndAgent.resx">
-      <DependentUpon>201708260645127_AddPendingRequestAndAgent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201709080821562_UpdateUserInfo.resx">
-      <DependentUpon>201709080821562_UpdateUserInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201709080915437_RemoveUserInfoGotGift.resx">
-      <DependentUpon>201709080915437_RemoveUserInfoGotGift.cs</DependentUpon>
-    </EmbeddedResource>
+    <Content Include="Connected Services\Application Insights\ConnectedService.json" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Connected Services\Application Insights\ConnectedService.json" />
+    <EmbeddedResource Include="Migrations\201709100635219_CreateUserInfo.resx">
+      <DependentUpon>201709100635219_CreateUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

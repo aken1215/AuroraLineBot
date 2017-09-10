@@ -7,13 +7,13 @@ namespace AuroraLineAPI.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class AddPendingRequestAndAgent : IMigrationMetadata
+    public sealed partial class CreateUserInfo : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddPendingRequestAndAgent));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(CreateUserInfo));
         
         string IMigrationMetadata.Id
         {
-            get { return "201708260645127_AddPendingRequestAndAgent"; }
+            get { return "201709100635219_CreateUserInfo"; }
         }
         
         string IMigrationMetadata.Source
