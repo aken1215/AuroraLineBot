@@ -49,7 +49,7 @@ namespace AuroraLineAPI.Controllers.api
 
                 return Request.CreateResponse(HttpStatusCode.NoContent);
             }
-            catch
+            catch(Exception ex)
             {
                 var request = JsonConvert.SerializeObject(model);
                 return Request.CreateResponse(HttpStatusCode.OK, request);
@@ -98,12 +98,12 @@ namespace AuroraLineAPI.Controllers.api
 
             if (result ==(int) UserInfoStatus.GetGift)
             {
-                message = "<html><body>已領過小禮物</body></html>";
+                message = "<html><body><h1>已領過小禮物<h1></body></html>";
             }
             else
             {
                 await this.AuroraLineBotService.UpdateUserStatus(id, UserInfoStatus.GetGift);
-                message = "<html><body>發送小禮物</body></html>";
+                message = "<html><body><h1>發送小禮物<h1></body></html>";
             }
 
             response.Content = new StringContent(message);
