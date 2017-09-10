@@ -26,6 +26,7 @@ namespace AuroraLineAPI.Services.AuroraLineBot
         public async Task CreateLineUserInfo(AuroraLineViewModel auroraLineViewModel)
         {
             var model = this.Mapper.Map<UserInfo>(auroraLineViewModel);
+            model.Status = (int)UserInfoStatus.Name;
             await this.AuroraLineBotRepository.CreateLineUserInfo(model);
         }
 
@@ -41,12 +42,43 @@ namespace AuroraLineAPI.Services.AuroraLineBot
         public async Task UpdateLineUserInfo(AuroraLineViewModel auroraLineViewModel)
         {
             var model = this.Mapper.Map<UserInfo>(auroraLineViewModel);
+
             await this.AuroraLineBotRepository.UpdateLineUserInfo(model);
         }
 
-        public async Task<bool> GetUserInfoGiftState(string id)
+
+        public async Task AddPendingRequest(string id)
         {
-            return await this.AuroraLineBotRepository.GetUserInfoGiftState(id);
+            await this.AuroraLineBotRepository.AddPendingRequest(id);
+        }
+
+        public async Task<int> ClosePendingRequest(string id)
+        {
+            var result = await this.AuroraLineBotRepository.ClosePendingRequest(id);
+            return result;
+        }
+
+        public async Task EngageRequest(string pendingId)
+        {
+            await this.AuroraLineBotRepository.EngageRequest(pendingId);
+        }
+
+        public async Task<string> GetEngageRequest(string id)
+        {
+            var result = await this.AuroraLineBotRepository.GetEngageRequest(id);
+            return result;
+        }
+
+        public async Task<int> GetUserStatus(string id)
+        {
+            var result= await this.AuroraLineBotRepository.GetUserStatus(id);
+            return result;
+        }
+
+
+        public async Task UpdateUserStatus(string id, UserInfoStatus status)
+        {
+            await this.AuroraLineBotRepository.UpdateUserStatus(id, status);
         }
     }
 }

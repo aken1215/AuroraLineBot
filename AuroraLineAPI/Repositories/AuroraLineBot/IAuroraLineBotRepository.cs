@@ -16,6 +16,18 @@ namespace AuroraLineAPI.Repositories.AuroraLineBot
 
         Task<UserInfo> GetLineUserInfo(string id);
 
-        Task<bool> GetUserInfoGiftState(string id);
+        Task<bool> IsEngaged(string id);
+
+        Task AddPendingRequest(string id);
+
+        Task<int> ClosePendingRequest(string id);
+
+        Task EngageRequest(string pendingId);
+
+        Task<string> GetEngageRequest(string id);
+
+        Task<int> GetUserStatus(string id);
+
+        Task UpdateUserStatus(string id, UserInfoStatus status);
     }
 }

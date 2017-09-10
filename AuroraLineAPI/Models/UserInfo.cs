@@ -13,10 +13,14 @@ namespace AuroraLineAPI.Models
 
         public string Name { get; set; }
 
+        public string Mobile { get; set; }
+
         public string EMail { get; set; }
 
-        public string JobTitle { get; set; }
+        public string ServiceDPT { get; set; }
 
-        public bool GotGift { get; set; }
+        public int Status { get; set; }
     }
+
+
 }

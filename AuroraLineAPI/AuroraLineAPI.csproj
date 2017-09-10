@@ -290,13 +290,31 @@
     <Compile Include="Migrations\201708250140089_AddColumnToUserInfo.Designer.cs">
       <DependentUpon>201708250140089_AddColumnToUserInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201708260504032_UpdateUserInfo.cs" />
-    <Compile Include="Migrations\201708260504032_UpdateUserInfo.Designer.cs">
-      <DependentUpon>201708260504032_UpdateUserInfo.cs</DependentUpon>
+    <Compile Include="Migrations\201708260623486_AddEngageds.cs" />
+    <Compile Include="Migrations\201708260623486_AddEngageds.Designer.cs">
+      <DependentUpon>201708260623486_AddEngageds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260630519_ReNameEngaged.cs" />
+    <Compile Include="Migrations\201708260630519_ReNameEngaged.Designer.cs">
+      <DependentUpon>201708260630519_ReNameEngaged.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708260645127_AddPendingRequestAndAgent.cs" />
+    <Compile Include="Migrations\201708260645127_AddPendingRequestAndAgent.Designer.cs">
+      <DependentUpon>201708260645127_AddPendingRequestAndAgent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709080821562_UpdateUserInfo.cs" />
+    <Compile Include="Migrations\201709080821562_UpdateUserInfo.Designer.cs">
+      <DependentUpon>201709080821562_UpdateUserInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709080915437_RemoveUserInfoGotGift.cs" />
+    <Compile Include="Migrations\201709080915437_RemoveUserInfoGotGift.Designer.cs">
+      <DependentUpon>201709080915437_RemoveUserInfoGotGift.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Agent.cs" />
     <Compile Include="Models\AuroraLineDbContext.cs" />
-    <Compile Include="Models\Engagged.cs" />
+    <Compile Include="Models\EngageRequest.cs" />
+    <Compile Include="Models\PendingRequest.cs" />
     <Compile Include="Models\UserInfo.cs" />
     <Compile Include="Modules\MapperModule.cs" />
     <Compile Include="Modules\RepositoryModule.cs" />
@@ -340,8 +358,20 @@
     <EmbeddedResource Include="Migrations\201708250140089_AddColumnToUserInfo.resx">
       <DependentUpon>201708250140089_AddColumnToUserInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708260504032_UpdateUserInfo.resx">
-      <DependentUpon>201708260504032_UpdateUserInfo.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201708260623486_AddEngageds.resx">
+      <DependentUpon>201708260623486_AddEngageds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260630519_ReNameEngaged.resx">
+      <DependentUpon>201708260630519_ReNameEngaged.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708260645127_AddPendingRequestAndAgent.resx">
+      <DependentUpon>201708260645127_AddPendingRequestAndAgent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709080821562_UpdateUserInfo.resx">
+      <DependentUpon>201709080821562_UpdateUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709080915437_RemoveUserInfoGotGift.resx">
+      <DependentUpon>201709080915437_RemoveUserInfoGotGift.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

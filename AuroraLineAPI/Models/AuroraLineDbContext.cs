@@ -6,17 +6,23 @@ using System.Web;
 
 namespace AuroraLineAPI.Models
 {
-public class AuroraLineDbContext:DbContext
-{
-    public AuroraLineDbContext() : this("AuroraLine")
+    public class AuroraLineDbContext : DbContext
     {
-    }
+        public AuroraLineDbContext() : this("AuroraLine")
+        {
+        }
 
-    public AuroraLineDbContext(string nameOrConnectionString)
-            : base(nameOrConnectionString)
-    {
-    }
+        public AuroraLineDbContext(string nameOrConnectionString)
+                : base(nameOrConnectionString)
+        {
+        }
 
-    public DbSet<UserInfo> UserInfos { get; set; }
-}
+        public DbSet<UserInfo> UserInfos { get; set; }
+
+        public DbSet<EngageRequest> EngageRequests { get; set; }
+
+        public DbSet<Agent> Agents { get; set; }
+
+        public DbSet<PendingRequest> PendingRequests { get; set; }
+    }
 }

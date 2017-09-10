@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using AuroraLineAPI.AuroraLine.ViewModels;
+using AuroraLineAPI.Models;
 
 namespace AuroraLineAPI.Services.AuroraLineBot
 {
@@ -15,6 +16,18 @@ namespace AuroraLineAPI.Services.AuroraLineBot
 
         Task<AuroraLineViewModel> GetLineUserInfo(string id);
 
-        Task<bool> GetUserInfoGiftState(string id);
+
+
+        Task AddPendingRequest(string id);
+
+        Task<int> ClosePendingRequest(string id);
+
+        Task EngageRequest(string pendingId);
+
+        Task<string> GetEngageRequest(string id);
+
+        Task<int> GetUserStatus(string id);
+
+        Task UpdateUserStatus(string id, UserInfoStatus status);
     }
 }
