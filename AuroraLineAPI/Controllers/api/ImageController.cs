@@ -40,8 +40,8 @@ namespace AuroraLineAPI.Controllers.api
             resp.StatusCode = HttpStatusCode.OK;
 
             resp.Content.Headers.ContentType = new MediaTypeHeaderValue("image/png");
-            resp.Content.Headers.ContentDisposition = new ContentDispositionHeaderValue("attachment");
-            resp.Content.Headers.ContentDisposition.FileName = "avatar.png";
+            //resp.Content.Headers.ContentDisposition = new ContentDispositionHeaderValue("attachment");
+            //resp.Content.Headers.ContentDisposition.FileName = "avatar.png";
 
             return resp;
 
