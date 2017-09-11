@@ -55,6 +55,7 @@ namespace AuroraLineAPI.Repositories.AuroraLineBot
             if (model.EMail != null)
             {
                 userInfo.EMail = model.EMail;
+                userInfo.Status = (int)UserInfoStatus.WaitGift;
             }
 
 
