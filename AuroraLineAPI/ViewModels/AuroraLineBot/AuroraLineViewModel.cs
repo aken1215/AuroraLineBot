@@ -37,10 +37,10 @@ namespace AuroraLineAPI.AuroraLine.ViewModels
 
         public string Name { get; set; }
 
-        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "您的電話號碼格式有問題唷，請您在輸入一次")]
+        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "您的電話號碼格式有問題唷，請您在輸入一次\n(範例格式0912345678)")]
         public string mobile { get; set; }
 
-        [EmailAddress(ErrorMessage = "您的EMail格式有問題唷，請您在輸入一次")]
+        [EmailAddress(ErrorMessage = "您的EMail格式有問題唷，請您在輸入一次\n(範例格式a12345@hotmail.com)")]
         public string EMail { get; set; }
 
         public UserInfoStatus Status { get; set; }
