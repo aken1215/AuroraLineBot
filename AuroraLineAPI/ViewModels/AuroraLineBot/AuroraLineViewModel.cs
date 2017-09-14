@@ -44,7 +44,7 @@ namespace AuroraLineAPI.AuroraLine.ViewModels
         [EmailAddress(ErrorMessage = "您的EMail格式有問題唷，請您在輸入一次\n(範例格式: a12345@hotmail.com)")]
         public string EMail { get; set; }
 
-        public UserInfoStatus Status { get; set; }
+        public string Status { get; set; }
 
         public string ServiceDPT { get; set; }
 

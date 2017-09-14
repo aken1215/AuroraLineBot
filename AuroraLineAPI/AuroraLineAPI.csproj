@@ -17,7 +17,7 @@
     <AssemblyName>AuroraLineAPI</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -307,7 +307,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\170723093548.png" />
-    <Content Include="favicon.ico" />
+    <Content Include="dist\favicon.ico" />
+    <Content Include="dist\glyphicons-halflings-regular.89889688147bd7575d63.svg" />
+    <Content Include="dist\index.html" />
+    <Content Include="dist\inline.bundle.js" />
+    <Content Include="dist\main.bundle.js" />
+    <Content Include="dist\polyfills.bundle.js" />
+    <Content Include="dist\styles.bundle.js" />
+    <Content Include="dist\vendor.bundle.js" />
     <Content Include="Global.asax" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -335,6 +342,17 @@
       <DependentUpon>201709100635219_CreateUserInfo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="dist\glyphicons-halflings-regular.448c34a56d699c29117a.woff2" />
+    <Content Include="dist\glyphicons-halflings-regular.e18bbf611f2a2e43afc0.ttf" />
+    <Content Include="dist\glyphicons-halflings-regular.f4769f9bdb7466be6508.eot" />
+    <Content Include="dist\glyphicons-halflings-regular.fa2772327f55d8198301.woff" />
+    <Content Include="dist\inline.bundle.js.map" />
+    <Content Include="dist\main.bundle.js.map" />
+    <Content Include="dist\polyfills.bundle.js.map" />
+    <Content Include="dist\styles.bundle.js.map" />
+    <Content Include="dist\vendor.bundle.js.map" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -353,7 +371,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>60400</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:60400/</IISUrl>
+          <IISUrl>http://localhost/AuroraLineAPI</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

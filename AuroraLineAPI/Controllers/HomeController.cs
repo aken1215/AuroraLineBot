@@ -10,9 +10,7 @@ namespace AuroraLineAPI.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
-
-            return View();
+            return File(Server.MapPath("~/dist/") + "index.html", "text/html");
         }
     }
 }

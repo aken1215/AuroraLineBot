@@ -29,5 +29,7 @@ namespace AuroraLineAPI.Repositories.AuroraLineBot
         Task<int> GetUserStatus(string id);
 
         Task UpdateUserStatus(string id, UserInfoStatus status);
+
+        Task<IEnumerable<UserInfo>> GetAllUserInfo();
     }
 }

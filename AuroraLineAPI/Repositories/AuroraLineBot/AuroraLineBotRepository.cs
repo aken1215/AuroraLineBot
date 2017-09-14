@@ -145,5 +145,13 @@ namespace AuroraLineAPI.Repositories.AuroraLineBot
             userInfo.Status = (int)UserInfoStatus.GetGift;
             await this.AuroraLineDbContext.SaveChangesAsync();
         }
+
+        public async Task<IEnumerable<UserInfo>> GetAllUserInfo()
+        {
+            var userinfoList = await this.AuroraLineDbContext.UserInfos.ToListAsync();
+
+            return userinfoList;
+
+        }
     }
 }

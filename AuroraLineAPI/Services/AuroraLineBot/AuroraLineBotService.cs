@@ -80,5 +80,14 @@ namespace AuroraLineAPI.Services.AuroraLineBot
         {
             await this.AuroraLineBotRepository.UpdateUserStatus(id, status);
         }
+
+        public async Task<IEnumerable<AuroraLineViewModel>> GetAllUserInfo()
+        {
+            var infoList = await this.AuroraLineBotRepository.GetAllUserInfo();
+
+            var result = this.Mapper.Map<IEnumerable<AuroraLineViewModel>>(infoList);
+
+            return result;
+        }
     }
 }

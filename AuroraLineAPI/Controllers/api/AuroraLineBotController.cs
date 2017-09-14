@@ -24,9 +24,10 @@ namespace AuroraLineAPI.Controllers.api
         }
 
         // GET: api/AuroraLineBot
-        public IEnumerable<string> Get()
+        public async Task<HttpResponseMessage> Get()
         {
-            return new string[] { "value1", "value2" };
+            var allUserInfo = await this.AuroraLineBotService.GetAllUserInfo();
+            return Request.CreateResponse(HttpStatusCode.OK, allUserInfo);
         }
 
         // GET: api/AuroraLineBot/5
