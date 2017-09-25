@@ -3,7 +3,7 @@ namespace AuroraLineAPI.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class CreateUserInfo : DbMigration
+    public partial class CreateUserInfos : DbMigration
     {
         public override void Up()
         {
@@ -42,14 +42,15 @@ namespace AuroraLineAPI.Migrations
                 "dbo.UserInfoes",
                 c => new
                     {
-                        LineID = c.String(nullable: false, maxLength: 128),
+                        SNO = c.Int(nullable: false, identity: true),
+                        LineID = c.String(),
                         Name = c.String(),
                         Mobile = c.String(),
                         EMail = c.String(),
                         ServiceDPT = c.String(),
                         Status = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.LineID);
+                .PrimaryKey(t => t.SNO);
             
         }
         
