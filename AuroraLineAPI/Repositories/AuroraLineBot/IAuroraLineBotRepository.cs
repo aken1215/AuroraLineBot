@@ -31,5 +31,6 @@ namespace AuroraLineAPI.Repositories.AuroraLineBot
         Task UpdateUserStatus(string id, UserInfoStatus status);
 
         Task<IEnumerable<UserInfo>> GetAllUserInfo();
+        Task PostConversation(Conversation model);
     }
 }

@@ -8,6 +8,7 @@ using AuroraLineAPI.AuroraLine.ViewModels;
 using System.Threading.Tasks;
 using System.Configuration;
 using AuroraLineAPI.Models;
+using AuroraLineAPI.ViewModels.AuroraLineBot;
 
 namespace AuroraLineAPI.Services.AuroraLineBot
 {
@@ -88,6 +89,15 @@ namespace AuroraLineAPI.Services.AuroraLineBot
             var result = this.Mapper.Map<IEnumerable<AuroraLineViewModel>>(infoList);
 
             return result;
+        }
+
+        public async Task PostConversation(ConversationViewModel model)
+        {
+            var data = this.Mapper.Map<Conversation>(model);
+
+            data.CreateDate = DateTime.Now;
+
+            await this.AuroraLineBotRepository.PostConversation(data);
         }
     }
 }

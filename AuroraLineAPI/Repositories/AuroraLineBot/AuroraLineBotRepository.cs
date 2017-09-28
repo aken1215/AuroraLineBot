@@ -153,5 +153,16 @@ namespace AuroraLineAPI.Repositories.AuroraLineBot
             return userinfoList;
 
         }
+
+        /// <summary>
+        /// 儲存對話內容
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public async Task PostConversation(Conversation model)
+        {
+            this.AuroraLineDbContext.Conversations.Add(model);
+            await this.AuroraLineDbContext.SaveChangesAsync();
+        }
     }
 }

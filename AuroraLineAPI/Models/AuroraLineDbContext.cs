@@ -24,5 +24,7 @@ namespace AuroraLineAPI.Models
         public DbSet<Agent> Agents { get; set; }
 
         public DbSet<PendingRequest> PendingRequests { get; set; }
+
+        public DbSet<Conversation> Conversations { get; set; }
     }
 }

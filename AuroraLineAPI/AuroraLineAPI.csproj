@@ -17,7 +17,7 @@
     <AssemblyName>AuroraLineAPI</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -286,9 +286,14 @@
     <Compile Include="Migrations\201709250123075_CreateUserInfos.Designer.cs">
       <DependentUpon>201709250123075_CreateUserInfos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709280624324_CreateConversation.cs" />
+    <Compile Include="Migrations\201709280624324_CreateConversation.Designer.cs">
+      <DependentUpon>201709280624324_CreateConversation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Agent.cs" />
     <Compile Include="Models\AuroraLineDbContext.cs" />
+    <Compile Include="Models\Conversation.cs" />
     <Compile Include="Models\EngageRequest.cs" />
     <Compile Include="Models\PendingRequest.cs" />
     <Compile Include="Models\UserInfo.cs" />
@@ -304,6 +309,7 @@
     <Compile Include="Services\Common\QRCodeService.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\AuroraLineBot\AuroraLineViewModel.cs" />
+    <Compile Include="ViewModels\AuroraLineBot\ConversationViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\170723093548.png" />
@@ -342,6 +348,9 @@
     <EmbeddedResource Include="Migrations\201709250123075_CreateUserInfos.resx">
       <DependentUpon>201709250123075_CreateUserInfos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709280624324_CreateConversation.resx">
+      <DependentUpon>201709280624324_CreateConversation.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="dist\glyphicons-halflings-regular.448c34a56d699c29117a.woff2" />
@@ -367,7 +376,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>60400</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost/AuroraLineAPI</IISUrl>
+          <IISUrl>http://localhost:60400/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

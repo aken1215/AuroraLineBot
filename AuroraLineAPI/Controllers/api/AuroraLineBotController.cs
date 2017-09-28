@@ -1,5 +1,6 @@
 ﻿using AuroraLineAPI.AuroraLine.ViewModels;
 using AuroraLineAPI.Services.AuroraLineBot;
+using AuroraLineAPI.ViewModels.AuroraLineBot;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -142,5 +143,15 @@ namespace AuroraLineAPI.Controllers.api
 
             return Request.CreateResponse(HttpStatusCode.OK,result);
         }
+
+        [HttpPost]
+        [Route("api/Conversation")]
+        public async Task<HttpResponseMessage> PostConversation(ConversationViewModel model)
+        {
+            await this.AuroraLineBotService.PostConversation(model);
+
+            return Request.CreateResponse(HttpStatusCode.NoContent);
+        }
+
     }
 }

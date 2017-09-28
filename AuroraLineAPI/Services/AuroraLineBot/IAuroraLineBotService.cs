@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Web;
 using AuroraLineAPI.AuroraLine.ViewModels;
 using AuroraLineAPI.Models;
+using AuroraLineAPI.ViewModels.AuroraLineBot;
 
 namespace AuroraLineAPI.Services.AuroraLineBot
 {
@@ -30,5 +31,6 @@ namespace AuroraLineAPI.Services.AuroraLineBot
 
         Task UpdateUserStatus(string id, UserInfoStatus status);
         Task<IEnumerable<AuroraLineViewModel>> GetAllUserInfo();
+        Task PostConversation(ConversationViewModel model);
     }
 }

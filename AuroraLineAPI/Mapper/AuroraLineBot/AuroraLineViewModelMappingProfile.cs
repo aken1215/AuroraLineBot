@@ -1,5 +1,6 @@
 ﻿using AuroraLineAPI.AuroraLine.ViewModels;
 using AuroraLineAPI.Models;
+using AuroraLineAPI.ViewModels.AuroraLineBot;
 using AutoMapper;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,7 @@ namespace AuroraLineAPI.Mapper.AuroraLineBot
         public AuroraLineViewModelMappingProfile()
         {
             this.CreateMap<AuroraLineViewModel, UserInfo>();
+            this.CreateMap<ConversationViewModel, Conversation>();
             this.CreateMap<UserInfo, AuroraLineViewModel>().AfterMap((userinfo,auroraLine)=>
             {
                 switch (userinfo.Status)
