@@ -115,6 +115,15 @@ namespace AuroraLineAPI.Repositories.AuroraLineBot
                                                        .Where(i => i.LineID ==  id)
                                                        .FirstOrDefaultAsync();
 
+            if(result==null)
+            {
+                result = new UserInfo()
+                {
+                    Status = -1
+                };
+            }
+
+
             return result;
         }
 
