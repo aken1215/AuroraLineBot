@@ -109,19 +109,13 @@ namespace AuroraLineAPI.Repositories.AuroraLineBot
             }
         }
 
-        public async Task<int> GetUserStatus(string id)
+        public async Task<UserInfo> GetUserStatus(string id)
         {
             var result = await this.AuroraLineDbContext.UserInfos
                                                        .Where(i => i.LineID ==  id)
                                                        .FirstOrDefaultAsync();
-            if (result == null)
-            {
-                return -1;
-            }
-            else
-            {
-                return result.Status;
-            }
+
+            return result;
         }
 
         public async Task UpdateUserStatus(string id, UserInfoStatus status)

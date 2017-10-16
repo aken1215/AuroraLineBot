@@ -70,9 +70,10 @@ namespace AuroraLineAPI.Services.AuroraLineBot
             return result;
         }
 
-        public async Task<int> GetUserStatus(string id)
+        public async Task<AuroraLineViewModel> GetUserStatus(string id)
         {
-            var result= await this.AuroraLineBotRepository.GetUserStatus(id);
+            var data= await this.AuroraLineBotRepository.GetUserStatus(id);
+            var result = this.Mapper.Map<AuroraLineViewModel>(data);
             return result;
         }
 

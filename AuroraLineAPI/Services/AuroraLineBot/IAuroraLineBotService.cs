@@ -27,7 +27,7 @@ namespace AuroraLineAPI.Services.AuroraLineBot
 
         Task<string> GetEngageRequest(string id);
 
-        Task<int> GetUserStatus(string id);
+        Task<AuroraLineViewModel> GetUserStatus(string id);
 
         Task UpdateUserStatus(string id, UserInfoStatus status);
         Task<IEnumerable<AuroraLineViewModel>> GetAllUserInfo();
