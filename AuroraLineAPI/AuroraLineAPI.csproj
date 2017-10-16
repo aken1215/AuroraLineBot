@@ -317,6 +317,8 @@
     <Content Include="dist\favicon.ico" />
     <Content Include="dist\glyphicons-halflings-regular.89889688147bd7575d63.svg" />
     <Content Include="dist\index.html" />
+    <Content Include="dist\inline.6ea2199b4b3a50fc0136.bundle.js" />
+    <Content Include="dist\main.5d0450873cfff9b9ff2a.bundle.js" />
     <Content Include="dist\polyfills.fc12e6c62c57e929e3f0.bundle.js" />
     <Content Include="dist\styles.7ab696a7ec6e5f0da6ad.bundle.css" />
     <Content Include="dist\vendor.588927c2ad0704aa5598.bundle.js" />
