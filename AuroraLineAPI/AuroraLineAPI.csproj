@@ -17,7 +17,7 @@
     <AssemblyName>AuroraLineAPI</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -286,6 +286,10 @@
     <Compile Include="Migrations\201710160324049_CreateCloudDB.Designer.cs">
       <DependentUpon>201710160324049_CreateCloudDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710160545068_UpdateCloudDb.cs" />
+    <Compile Include="Migrations\201710160545068_UpdateCloudDb.Designer.cs">
+      <DependentUpon>201710160545068_UpdateCloudDb.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Agent.cs" />
     <Compile Include="Models\AuroraLineDbContext.cs" />
@@ -313,8 +317,6 @@
     <Content Include="dist\favicon.ico" />
     <Content Include="dist\glyphicons-halflings-regular.89889688147bd7575d63.svg" />
     <Content Include="dist\index.html" />
-    <Content Include="dist\inline.52de020382b9a404575a.bundle.js" />
-    <Content Include="dist\main.49b2894770e6e134d685.bundle.js" />
     <Content Include="dist\polyfills.fc12e6c62c57e929e3f0.bundle.js" />
     <Content Include="dist\styles.7ab696a7ec6e5f0da6ad.bundle.css" />
     <Content Include="dist\vendor.588927c2ad0704aa5598.bundle.js" />
@@ -350,6 +352,9 @@
     <EmbeddedResource Include="Migrations\201710160324049_CreateCloudDB.resx">
       <DependentUpon>201710160324049_CreateCloudDB.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710160545068_UpdateCloudDb.resx">
+      <DependentUpon>201710160545068_UpdateCloudDb.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -369,7 +374,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>60400</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:60400/</IISUrl>
+          <IISUrl>http://localhost/AuroraLineAPI</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
