@@ -7,13 +7,13 @@ namespace AuroraLineAPI.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class CreateConversation : IMigrationMetadata
+    public sealed partial class CreateCloudDB : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(CreateConversation));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(CreateCloudDB));
         
         string IMigrationMetadata.Id
         {
-            get { return "201709280624324_CreateConversation"; }
+            get { return "201710160324049_CreateCloudDB"; }
         }
         
         string IMigrationMetadata.Source

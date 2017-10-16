@@ -3,7 +3,7 @@ namespace AuroraLineAPI.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class CreateUserInfos : DbMigration
+    public partial class CreateCloudDB : DbMigration
     {
         public override void Up()
         {
@@ -16,6 +16,17 @@ namespace AuroraLineAPI.Migrations
                         AgentState = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.Conversations",
+                c => new
+                    {
+                        Sno = c.Int(nullable: false, identity: true),
+                        LineID = c.String(),
+                        Content = c.String(),
+                        CreateDate = c.DateTime(nullable: false),
+                    })
+                .PrimaryKey(t => t.Sno);
             
             CreateTable(
                 "dbo.EngageRequests",
@@ -46,8 +57,6 @@ namespace AuroraLineAPI.Migrations
                         LineID = c.String(),
                         Name = c.String(),
                         Mobile = c.String(),
-                        EMail = c.String(),
-                        ServiceDPT = c.String(),
                         Status = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.SNO);
@@ -59,6 +68,7 @@ namespace AuroraLineAPI.Migrations
             DropTable("dbo.UserInfoes");
             DropTable("dbo.PendingRequests");
             DropTable("dbo.EngageRequests");
+            DropTable("dbo.Conversations");
             DropTable("dbo.Agents");
         }
     }

@@ -90,32 +90,6 @@ namespace AuroraLineAPI.Controllers.api
         }
 
 
-        [Route("api/ScanQrCode/{id}")]
-        [HttpGet]
-        public async Task<HttpResponseMessage> ScanQrCode(string id)
-        {
-            var result = await this.AuroraLineBotService.GetUserStatus(id);
-            var response = new HttpResponseMessage();
-            var message = "";
-
-            if (result ==(int) UserInfoStatus.GetGift)
-            {
-                message = "<html><body><h1>已領過小禮物<h1></body></html>";
-            }
-            else
-            {
-                await this.AuroraLineBotService.UpdateUserStatus(id, UserInfoStatus.GetGift);
-                message = "<html><body><h1>發送小禮物<h1></body></html>";
-            }
-
-            response.Content = new StringContent(message);
-            response.StatusCode = HttpStatusCode.OK;
-            response.Content.Headers.ContentType = new MediaTypeHeaderValue("text/html");
-            response.Content.Headers.ContentType.CharSet = "utf-8";
-
-            return response;
-        }
-
         [HttpPost]
         [Route("api/PendingRequest/{id}")]
         public async Task<HttpResponseMessage> PendingRequest(string id)

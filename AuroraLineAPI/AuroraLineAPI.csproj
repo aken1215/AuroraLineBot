@@ -282,13 +282,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Mapper\AuroraLineBot\AuroraLineViewModelMappingProfile.cs" />
-    <Compile Include="Migrations\201709250123075_CreateUserInfos.cs" />
-    <Compile Include="Migrations\201709250123075_CreateUserInfos.Designer.cs">
-      <DependentUpon>201709250123075_CreateUserInfos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201709280624324_CreateConversation.cs" />
-    <Compile Include="Migrations\201709280624324_CreateConversation.Designer.cs">
-      <DependentUpon>201709280624324_CreateConversation.cs</DependentUpon>
+    <Compile Include="Migrations\201710160324049_CreateCloudDB.cs" />
+    <Compile Include="Migrations\201710160324049_CreateCloudDB.Designer.cs">
+      <DependentUpon>201710160324049_CreateCloudDB.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Agent.cs" />
@@ -345,18 +341,15 @@
     <Content Include="Connected Services\Application Insights\ConnectedService.json" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201709250123075_CreateUserInfos.resx">
-      <DependentUpon>201709250123075_CreateUserInfos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201709280624324_CreateConversation.resx">
-      <DependentUpon>201709280624324_CreateConversation.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="dist\glyphicons-halflings-regular.448c34a56d699c29117a.woff2" />
     <Content Include="dist\glyphicons-halflings-regular.e18bbf611f2a2e43afc0.ttf" />
     <Content Include="dist\glyphicons-halflings-regular.f4769f9bdb7466be6508.eot" />
     <Content Include="dist\glyphicons-halflings-regular.fa2772327f55d8198301.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201710160324049_CreateCloudDB.resx">
+      <DependentUpon>201710160324049_CreateCloudDB.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

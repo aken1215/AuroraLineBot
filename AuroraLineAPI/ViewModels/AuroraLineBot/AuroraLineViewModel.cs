@@ -13,10 +13,7 @@ namespace AuroraLineAPI.AuroraLine.ViewModels
     {
         Name = 0,
         Mobile = 1,
-        ServiceDPT =2 ,
-        EMAIL = 3, 
-        WaitGift=4,
-        GetGift = 5
+        Done =2
     }
 
     public enum UserState

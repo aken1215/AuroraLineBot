@@ -43,21 +43,8 @@ namespace AuroraLineAPI.Repositories.AuroraLineBot
             if (model.Mobile != null)
             {
                 userInfo.Mobile = model.Mobile;
-                userInfo.Status = (int)UserInfoStatus.ServiceDPT;
+                userInfo.Status = (int)UserInfoStatus.Done;
             }
-
-            if (model.ServiceDPT != null)
-            {
-                userInfo.ServiceDPT = model.ServiceDPT;
-                userInfo.Status = (int)UserInfoStatus.EMAIL;
-            }
-
-            if (model.EMail != null)
-            {
-                userInfo.EMail = model.EMail;
-                userInfo.Status = (int)UserInfoStatus.WaitGift;
-            }
-
 
             await this.AuroraLineDbContext.SaveChangesAsync();
         }
@@ -139,11 +126,7 @@ namespace AuroraLineAPI.Repositories.AuroraLineBot
 
         public async Task UpdateUserStatus(string id, UserInfoStatus status)
         {
-            var userInfo = await this.AuroraLineDbContext.UserInfos
-                                           .Where(i => i.LineID == id)
-                                           .FirstOrDefaultAsync();
-            userInfo.Status = (int)UserInfoStatus.GetGift;
-            await this.AuroraLineDbContext.SaveChangesAsync();
+            throw new  NotImplementedException();
         }
 
         public async Task<IEnumerable<UserInfo>> GetAllUserInfo()
