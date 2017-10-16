@@ -26,16 +26,7 @@ namespace AuroraLineAPI.Mapper.AuroraLineBot
                         auroraLine.Status = "填寫電話";
                         break;
                     case 2:
-                        auroraLine.Status = "填寫單位";
-                        break;
-                    case 3:
-                        auroraLine.Status = "填寫信箱";
-                        break;
-                    case 4:
-                        auroraLine.Status = "未領禮物";
-                        break;
-                    case 5:
-                        auroraLine.Status = "已領取";
+                        auroraLine.Status = "完成";
                         break;
                 }
 
