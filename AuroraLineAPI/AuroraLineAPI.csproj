@@ -319,10 +319,14 @@
     <Content Include="App_Data\170723093548.png" />
     <Content Include="dist\3rdpartylicenses.txt" />
     <Content Include="dist\favicon.ico" />
+    <Content Include="dist\glyphicons-halflings-regular.448c34a56d699c29117a.woff2" />
     <Content Include="dist\glyphicons-halflings-regular.89889688147bd7575d63.svg" />
+    <Content Include="dist\glyphicons-halflings-regular.e18bbf611f2a2e43afc0.ttf" />
+    <Content Include="dist\glyphicons-halflings-regular.f4769f9bdb7466be6508.eot" />
+    <Content Include="dist\glyphicons-halflings-regular.fa2772327f55d8198301.woff" />
     <Content Include="dist\index.html" />
-    <Content Include="dist\inline.6ea2199b4b3a50fc0136.bundle.js" />
-    <Content Include="dist\main.5d0450873cfff9b9ff2a.bundle.js" />
+    <Content Include="dist\inline.841f5ebe5ea5946e5f9b.bundle.js" />
+    <Content Include="dist\main.a6ba5e5eb7374697f1dd.bundle.js" />
     <Content Include="dist\polyfills.fc12e6c62c57e929e3f0.bundle.js" />
     <Content Include="dist\styles.7ab696a7ec6e5f0da6ad.bundle.css" />
     <Content Include="dist\vendor.588927c2ad0704aa5598.bundle.js" />
@@ -347,12 +351,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Connected Services\Application Insights\ConnectedService.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="dist\glyphicons-halflings-regular.448c34a56d699c29117a.woff2" />
-    <Content Include="dist\glyphicons-halflings-regular.e18bbf611f2a2e43afc0.ttf" />
-    <Content Include="dist\glyphicons-halflings-regular.f4769f9bdb7466be6508.eot" />
-    <Content Include="dist\glyphicons-halflings-regular.fa2772327f55d8198301.woff" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201710160324049_CreateCloudDB.resx">
