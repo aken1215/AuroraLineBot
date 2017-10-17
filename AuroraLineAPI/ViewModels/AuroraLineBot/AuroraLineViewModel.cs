@@ -13,7 +13,8 @@ namespace AuroraLineAPI.AuroraLine.ViewModels
     {
         Name = 0,
         Mobile = 1,
-        Done =2
+        Done =2,
+        EnrollBook = 3
     }
 
     public enum UserState
@@ -31,6 +32,7 @@ namespace AuroraLineAPI.AuroraLine.ViewModels
 
     public class AuroraLineViewModel
     {
+
         public int SNO { get; set; }
 
         public string LineID { get; set; }
@@ -46,6 +48,8 @@ namespace AuroraLineAPI.AuroraLine.ViewModels
         public string Status { get; set; }
 
         public string ServiceDPT { get; set; }
+
+        public string Address { get; set; }
 
     }
 }

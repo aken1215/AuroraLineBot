@@ -46,6 +46,12 @@ namespace AuroraLineAPI.Repositories.AuroraLineBot
                 userInfo.Status = (int)UserInfoStatus.Done;
             }
 
+            if(model.Address != null)
+            {
+                userInfo.Address = model.Address;
+                userInfo.Status = (int)UserInfoStatus.EnrollBook;
+            }
+
             await this.AuroraLineDbContext.SaveChangesAsync();
         }
 

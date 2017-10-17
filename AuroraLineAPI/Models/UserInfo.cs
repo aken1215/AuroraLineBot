@@ -19,6 +19,8 @@ namespace AuroraLineAPI.Models
 
         public string Mobile { get; set; }
 
+        public string Address { get; set; }
+
         public int Status { get; set; }
     }
 

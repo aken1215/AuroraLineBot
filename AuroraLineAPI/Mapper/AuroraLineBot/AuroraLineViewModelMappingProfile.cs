@@ -28,6 +28,9 @@ namespace AuroraLineAPI.Mapper.AuroraLineBot
                     case 2:
                         auroraLine.Status = "完成";
                         break;
+                    case 3:
+                        auroraLine.Status = "註冊月刊";
+                        break;
                 }
 
             });
